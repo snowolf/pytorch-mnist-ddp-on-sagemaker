@@ -1,8 +1,9 @@
 # pytorch-minist-ddp-on-sagemaker
 
-This is from https://github.com/muhyun/amazon-sagemaker-examples/tree/master/sagemaker-python-sdk/pytorch_mnist, it fixed the DDP issue, so it could really use multi host with multi card.
+This is a Pytorch distributed training demo code on Amazon SageMaker that support multi host with multi cards.
 
-Instead of using Pytroch distributed training launcher, here we use multiprocess instead. 
+
+Instead of using --torch.distributed.launch--, here we use --torch.multiprocessing-- instead. 
 
 For initialize the distributed environment, we use env as init_method.
 ```
@@ -17,3 +18,6 @@ os.environ['MASTER_PORT'] = '23456'
 ## Log
 
 Remove PyTorch DP when use single host multi GPU, change to use DDP as well.
+
+## Referecne
+https://pytorch.org/docs/stable/distributed.html
