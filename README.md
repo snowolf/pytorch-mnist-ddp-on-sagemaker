@@ -3,7 +3,8 @@
 This is a Pytorch distributed training demo code on Amazon SageMaker that support multi host with multi cards.
 
 
-Instead of using --torch.distributed.launch--, here we use --torch.multiprocessing-- instead. 
+Instead of using *torch.distributed.launch* here we use *torch.multiprocessing* instead. 
+
 
 For initialize the distributed environment, we use env as init_method.
 ```
